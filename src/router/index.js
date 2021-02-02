@@ -1,3 +1,11 @@
+/*
+ * @Author: yzh
+ * @Date: 2021-02-02 11:12:11
+ * @LastEditTime: 2021-02-02 15:10:43
+ * @LastEditors: yzh
+ * @Description: 
+ * @FilePath: /micro-vue/src/router/index.js
+ */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
@@ -22,7 +30,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: window.__POWERED_BY_QIANKUN__ ? '/vue-app' : process.env.BASE_URL,       // process.env.BASE_URL:'/'
   routes
 })
 
