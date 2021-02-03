@@ -1,7 +1,7 @@
 /*
  * @Author: yzh
  * @Date: 2021-02-02 11:12:11
- * @LastEditTime: 2021-02-02 18:47:57
+ * @LastEditTime: 2021-02-03 17:42:14
  * @LastEditors: yzh
  * @Description: 
  * @FilePath: /micro-vue/src/router/index.js
@@ -28,9 +28,13 @@ const routes = [
   }
 ]
 
+const customBase = process.env.NODE_ENV === 'production'
+  ? '/child/vue-history/'
+  :  process.env.BASE_URL
+
 const router = new VueRouter({
   mode: 'history',
-  base: window.__POWERED_BY_QIANKUN__ ? '/vue-app' : process.env.BASE_URL,       // process.env.BASE_URL:'/'
+  base: window.__POWERED_BY_QIANKUN__ ? '/vue-app' : customBase,       // process.env.BASE_URL:'/'
   routes
 })
 
