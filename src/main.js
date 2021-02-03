@@ -1,7 +1,7 @@
 /*
  * @Author: yzh
  * @Date: 2021-02-02 11:12:11
- * @LastEditTime: 2021-02-02 14:38:05
+ * @LastEditTime: 2021-02-02 18:48:05
  * @LastEditors: yzh
  * @Description: 
  * @FilePath: /micro-vue/src/main.js
@@ -26,7 +26,7 @@ function render(props = {}) {
   instance = new Vue({
     router,
     render: h => h(App)
-  }).$mount(container ? container.querySelector('#app') : '#app')
+  }).$mount(container ? container.querySelector('#app') : '#app');
 }
 
 // 独立运行时
